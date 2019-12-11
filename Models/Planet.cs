@@ -18,5 +18,6 @@ namespace StarWarsUniverseInfoSite.Models
         public int Gravity { get; set; }
 
         public List<Planet> Planets { get { return planets; } }
+
     }
 }

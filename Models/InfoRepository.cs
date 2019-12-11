@@ -10,7 +10,7 @@ namespace StarWarsUniverseInfoSite.Models
         private static List<Planet> planets = new List<Planet>();
 
         public static List<Planet> Planets { get { return planets; } }
-        public static void AddPlanet(Planet planet)
+        public void AddPlanet(Planet planet)
         {
             planets.Add(planet);
         }

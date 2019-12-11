@@ -9,7 +9,6 @@ namespace StarWarsUniverseInfoSite.Controllers
 {
     public class PlanetController : Controller
     {
-        Planet planet;
         Species species;
         public PlanetController()
         {
