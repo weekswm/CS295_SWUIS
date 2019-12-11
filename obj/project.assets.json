@@ -12941,11 +12941,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marty\\Documents\\2019F\\CS295N_ASPdotNET\\SWUIS\\StarWarsUniverseInfoSite\\StarWarsUniverseInfoSite.csproj",
+      "projectUniqueName": "C:\\Users\\Marty\\Documents\\2019F\\CS295N_ASPdotNET\\CS295_SWUIS\\StarWarsUniverseInfoSite.csproj",
       "projectName": "StarWarsUniverseInfoSite",
-      "projectPath": "C:\\Users\\Marty\\Documents\\2019F\\CS295N_ASPdotNET\\SWUIS\\StarWarsUniverseInfoSite\\StarWarsUniverseInfoSite.csproj",
+      "projectPath": "C:\\Users\\Marty\\Documents\\2019F\\CS295N_ASPdotNET\\CS295_SWUIS\\StarWarsUniverseInfoSite.csproj",
       "packagesPath": "C:\\Users\\Marty\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marty\\Documents\\2019F\\CS295N_ASPdotNET\\SWUIS\\StarWarsUniverseInfoSite\\obj\\",
+      "outputPath": "C:\\Users\\Marty\\Documents\\2019F\\CS295N_ASPdotNET\\CS295_SWUIS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

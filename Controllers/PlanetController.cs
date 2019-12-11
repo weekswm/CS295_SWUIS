@@ -15,7 +15,7 @@ namespace StarWarsUniverseInfoSite.Controllers
         {
             // This is temporary code, just for testing
             if (InfoRepository.SWSpecies.Count == 0) // only do this if it hasn't been done already
-            { 
+            {
                 species = new Species()
                 {
                     SpeciesName = "Wookiee",
@@ -47,6 +47,20 @@ namespace StarWarsUniverseInfoSite.Controllers
         {
             List<Species> species = InfoRepository.SWSpecies;
             return View(species);
+        }
+
+        public ViewResult ViewSpecies(Species species)
+        {
+            return View(species);
+        }
+
+        [HttpPost]
+        public RedirectToActionResult Species(string species)
+        {
+            Species speciesName = InfoRepository.GetSpeciesBySpeciesName(species);
+            // this is temporary, in the future the data will go in a database
+
+            return RedirectToAction("ViewSpecies", speciesName);
         }
     }
 }

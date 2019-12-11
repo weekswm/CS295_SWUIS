@@ -11,7 +11,65 @@
     <title>Species</title>
 </head>
 <body>
-    <h1>Species</h1>
+    <div class="text-center">
+        <h1 class="display-4">Species of Star Wars</h1>
+    </div>
+    <br />
+    <h4>Below is a list of all of the species we currently have data on, with the exception of humans. Humans were intentionally left off the list because, quite frankly, we are surrounded by them and there is enough information out there on our species that we don't need to waste the bandwidth. There are much more robust sources available and if you really want help understanding humans you might try getting out there and interacting with some!</h4>
+    <br />
+    <div class="dropdown-container">
+        <form method="post" asp-controller="Planet">
+            <div class="form-group">
+                <label class="col-md-4 control-label">Select Species</label>
+                <select class="form-control" name="species">
+                    <option value="Hutt">Hutt</option>
+                    <option value="Yoda's Species">Yoda's species</option>
+                    <option value="Trandoshan">Trandoshan</option>
+                    <option value="Mon Calamari">Mon Calamari</option>
+                    <option value="Ewok">Ewok</option>
+                    <option value="Sullustan">Sullustan</option>
+                    <option value="Neimodian">Neimodian</option>
+                    <option value="Gungan">Gungan</option>
+                    <option value="Toydarian">Toydarian</option>
+                    <option value="Dug">Dug</option>
+                    <option value="Twilek">Twi'lek</option>
+                    <option value="Aleena">Aleena</option>
+                    <option value="Vulptereen">Vulptereen</option>
+                    <option value="Xexto">Xexto</option>
+                    <option value="Toong">Toong</option>
+                    <option value="Cerean">Cerean</option>
+                    <option value="Nautolan">Nautolan</option>
+                    <option value="Zabrak">Zabrak</option>
+                    <option value="Tholothian">Tholothian</option>
+                    <option value="Iktotchi">Iktotchi</option>
+                    <option value="Quermian">Quermian</option>
+                    <option value="Keldor">Kel Dor</option>
+                    <option value="Chagrian">Chagrian</option>
+                    <option value="Geonosian">Geonosian</option>
+                    <option value="Mirialan">Mirialan</option>
+                    <option value="Clawdite">Clawdite</option>
+                    <option value="Besalisk">Besalisk</option>
+                    <option value="Kaminoan">Kaminoan</option>
+                    <option value="Skakoan">Skakoan</option>
+                    <option value="Muun">Muun</option>
+                    <option value="Togruta">Togruta</option>
+                    <option value="Kaleesh">Kaleesh</option>
+                    <option value="Pau'an">Pau'an</option>
+                    <option value="Wookiee">Wookiee</option>
+                    <option value="Droid">Droid</option>
+                    <option value="Rodian">Rodian</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button input type="submit" class="btn btn-warning">submit</button>
+                </div>
+            </div>
+        </form>
+    
+    </div>
 </body>
 </html>
 

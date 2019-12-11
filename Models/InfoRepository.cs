@@ -15,12 +15,23 @@ namespace StarWarsUniverseInfoSite.Models
             planets.Add(planet);
         }
 
+        public static Planet GetPlanetByName(string name)
+        {
+            Planet planet = planets.Find(p => p.PlanetName == name);
+            return planet;
+        }
+
         private static List<Species> speciesList = new List<Species>();
 
         public static List<Species> SWSpecies { get { return speciesList; } }
         public static void AddSpecies(Species species)
         {
             speciesList.Add(species);
+        }
+        public static Species GetSpeciesBySpeciesName(string speciesName)
+        {
+            Species species = speciesList.Find(s => s.SpeciesName == speciesName);
+            return species;
         }
 
         private static List<Vehicle> vehicles = new List<Vehicle>();
