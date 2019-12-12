@@ -17,22 +17,6 @@ namespace StarWarsUniverseInfoSite.Controllers
             {
                 starship = new Starship()
                 {
-                    Name = "Executor",
-                    Model = "Executor-Class Star Dreadnought",
-                    Manufacturer = "Kuat Drive Yards, Fondor Shipyards",
-                    Cost = 1143350000,
-                    Length = 19000,
-                    MaxAtmoshperingSpeed = "N/A",
-                    Crew = 279144,
-                    Passengers = 38000,
-                    CargoCapacity = 250000000,
-                    Consumables = 72,
-                    HyperdriveRating = 2.0,
-                    Class = "Star Dreadnought"
-                };
-                InfoRepository.AddStarship(starship);
-                starship = new Starship()
-                {
                     Name = "Millenium Falcon",
                     Model = "YT-1300 Light Freighter",
                     Manufacturer = "Corellian Engineering Corporation",
@@ -57,17 +41,14 @@ namespace StarWarsUniverseInfoSite.Controllers
 
         public ViewResult Starship()
         {
-            List<Starship> starships = InfoRepository.Starships;
-            return View(starships);
+            List<Starship> starship = InfoRepository.Starships;
+            return View(starship);
         }
-        [HttpPost]
-        public RedirectToActionResult Starship(string starship)
+        
+        public ViewResult ViewStarship(string starshipDropdown)
         {
-            Starship starshipPick = InfoRepository.GetStarshipByName(starship);
-            // this is temporary, in the future the data will go in a database
-
-            return RedirectToAction("ViewStarship", starshipPick);
+            starship = InfoRepository.GetStarshipByName(starshipDropdown);
+            return View(starship);
         }
-
     }
 }
