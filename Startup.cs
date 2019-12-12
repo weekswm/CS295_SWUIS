@@ -36,13 +36,13 @@ namespace StarWarsUniverseInfoSite
             if (environment.IsDevelopment())
             {
                 services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration["ConnectionStrings:MsSqlConnection"]));
+                options.UseMySql(
+                    Configuration["ConnectionStrings:MySqlConnection"]));
             }
             else if (environment.IsProduction())
             {
                 services.AddDbContext<AppDbContext>(options =>
-                    options.UseSqlServer(
+                    options.UseMySql(
                     Configuration["ConnectionStrings:MySqlConnection"]));
             }
             services.AddTransient<IInfoRepository, InfoRepository>();

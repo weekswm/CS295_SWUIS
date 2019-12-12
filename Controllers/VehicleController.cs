@@ -9,11 +9,13 @@ namespace StarWarsUniverseInfoSite.Controllers
 {
     public class VehicleController : Controller
     {
-        Starship starship;
-        public VehicleController()
+        IInfoRepository repo;
+        public VehicleController(IInfoRepository r)
         {
+            repo = r;
+        }
             // This is temporary code, just for testing
-            if (InfoRepository.Starships.Count == 0) // only do this if it hasn't been done already
+            /*if (InfoRepository.Starships.Count == 0) // only do this if it hasn't been done already
             {
                 starship = new Starship()
                 {
@@ -31,30 +33,30 @@ namespace StarWarsUniverseInfoSite.Controllers
                     Class = "Light Freighter"
                 };
                 InfoRepository.AddStarship(starship);
-            }
-        }
+            }*/
+        
         public ViewResult Vehicle()
         {
-            List<Vehicle> vehicles = InfoRepository.Vehicles;
+            List<Vehicle> vehicles = repo.Vehicles;
             return View(vehicles);
         }
 
         public ViewResult Starship()
         {
-            List<Starship> starship = InfoRepository.Starships;
+            List<Starship> starship = repo.Starships;
             return View(starship);
         }
 
         public ViewResult ViewStarship(Starship starship)
         {
-            List<Starship> starships = InfoRepository.Starships;
+            List<Starship> starships = repo.Starships;
             return View(starship);
         }
 
         [HttpPost]
         public RedirectToActionResult Starship(string starshipDropdown)
         {
-            Starship starship = InfoRepository.GetStarshipByName(starshipDropdown);
+            Starship starship = repo.GetStarshipByName(starshipDropdown);
             // this is temporary, in the future the data will go in a database
 
             return RedirectToAction("ViewStarship", starship);
