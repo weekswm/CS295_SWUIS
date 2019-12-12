@@ -18,10 +18,10 @@
     <h4>Below is a list of all of the species we currently have data on, with the exception of humans. Humans were intentionally left off the list because, quite frankly, we are surrounded by them and there is enough information out there on our species that we don't need to waste the bandwidth. There are much more robust sources available and if you really want help understanding humans you might try getting out there and interacting with some!</h4>
     <br />
     <div class="dropdown-container">
-        <form method="post" asp-controller="Planet">
+        <form method="get" asp-action="ViewSpecies">
             <div class="form-group">
                 <label class="col-md-4 control-label">Select Species</label>
-                <select class="form-control" name="species">
+                <select class="form-control" name="speciesName">
                     <option value="Hutt">Hutt</option>
                     <option value="Yoda's Species">Yoda's species</option>
                     <option value="Trandoshan">Trandoshan</option>

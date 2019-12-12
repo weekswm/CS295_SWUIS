@@ -16,12 +16,12 @@ namespace StarWarsUniverseInfoSite.Models
         public int Cost { get; set; }
         public double Length { get; set; }
         public string MaxAtmoshperingSpeed { get; set; }
+        public int Crew { get; set; }
         public int Passengers { get; set; }
         public int CargoCapacity { get; set; }
         public int Consumables { get; set; }
-        public int Class { get; set; }
-        public string HyperdriveRating { get; set; }
-        public string MGLT { get; set; }
+        public string Class { get; set; }
+        public double HyperdriveRating { get; set; }
 
         public List<Starship> Starships { get { return starships; } }
     }

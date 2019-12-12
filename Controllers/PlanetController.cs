@@ -48,18 +48,19 @@ namespace StarWarsUniverseInfoSite.Controllers
             return View(species);
         }
 
-        public ViewResult ViewSpecies(Species species)
+        public ViewResult ViewSpecies(string speciesName)
         {
+            species = InfoRepository.GetSpeciesBySpeciesName(speciesName);
             return View(species);
         }
 
-        [HttpPost]
+        /*[HttpPost]
         public RedirectToActionResult Species(string species)
         {
             Species speciesName = InfoRepository.GetSpeciesBySpeciesName(species);
             // this is temporary, in the future the data will go in a database
 
             return RedirectToAction("ViewSpecies", speciesName);
-        }
+        }*/
     }
 }

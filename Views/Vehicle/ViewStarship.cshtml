@@ -18,39 +18,58 @@
     <div>
         <table style="width:100%">
             <tr>
-                <th>Species Name</th>
-                <th>Classification</th>
-                <th>Designation</th>
-                <th>Avg. Height (in.)</th>
-                <th>Language</th>
-                <th>Avg. Life Span (yrs.)</th>
-                <th>Homeworld</th>
+                <th>Name</th>
+                <th>Model</th>
+                <th>Manufacturer</th>
+                <th>Cost (in Credits)</th>
+                <th>Length (ft.)</th>
+                <th>Max Atmosphering Speed</th>
+                <th>Crew</th>
+                <th>Passengers</th>
+                <th>Cargo Capacity (lbs.)</th>
+                <th>Consumables (months)</th>
+                <th>Hyperdrive Rating</th>
+                <th>Starship Class</th>
             </tr>
             <tr>
                 <td>
                     @Model.Name;
                 </td>
                 <td>
-                    @Model.Classification;
+                    @Model.Model;
                 </td>
                 <td>
-                    @Model.Designation;
+                    @Model.Manufacturer;
                 </td>
                 <td>
-                    @Model.AvgHeight;
+                    @Model.Cost;
                 </td>
                 <td>
-                    @Model.Language;
+                    @Model.Length;
                 </td>
                 <td>
-                    @Model.AvgLifeSpan;
+                    @Model.MaxAtmospheringSpeed;
                 </td>
                 <td>
-                    @Model.Homeworld.PlanetName;
+                    @Model.Crew;
+                </td>
+                <td>
+                    @Model.Passengers;
+                </td>
+                <td>
+                    @Model.CargoCapacity;
+                </td>
+                <td>
+                    @Model.Consumables;
+                </td>
+                <td>
+                    @Model.HyperdriveRating;
+                </td>
+                <td>
+                    @Model.StarshipClass;
                 </td>
             </tr>
         </table>
-        }
     </div>
 </body>
 </html>

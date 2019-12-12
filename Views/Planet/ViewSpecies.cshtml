@@ -16,41 +16,40 @@
     </div>
     <br />
     <div>
-            <table style="width:100%">
-                <tr>
-                    <th>Species Name</th>
-                    <th>Classification</th>
-                    <th>Designation</th>
-                    <th>Avg. Height (in.)</th>
-                    <th>Language</th>
-                    <th>Avg. Life Span (yrs.)</th>
-                    <th>Homeworld</th>
-                </tr>
-                <tr>
-                    <td>
-                        @Model.SpeciesName;
-                    </td>
-                    <td>
-                        @Model.Classification;
-                    </td>
-                    <td>
-                        @Model.Designation;
-                    </td>
-                    <td>
-                        @Model.AvgHeight;
-                    </td>
-                    <td>
-                        @Model.Language;
-                    </td>
-                    <td>
-                        @Model.AvgLifeSpan;
-                    </td>
-                    <td>
-                        @Model.Homeworld.PlanetName;
-                    </td>
-                </tr>
-            </table>
-        }
+        <table style="width:100%">
+            <tr>
+                <th>Species Name</th>
+                <th>Classification</th>
+                <th>Designation</th>
+                <th>Avg. Height (in.)</th>
+                <th>Language</th>
+                <th>Avg. Life Span (yrs.)</th>
+                <th>Homeworld</th>
+            </tr>
+            <tr>
+                <td>
+                    @Model.SpeciesName;
+                </td>
+                <td>
+                    @Model.Classification;
+                </td>
+                <td>
+                    @Model.Designation;
+                </td>
+                <td>
+                    @Model.AvgHeight;
+                </td>
+                <td>
+                    @Model.Language;
+                </td>
+                <td>
+                    @Model.AvgLifeSpan;
+                </td>
+                <td>
+                    @Model.Homeworld.PlanetName;
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
