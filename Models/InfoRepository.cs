@@ -5,52 +5,56 @@ using System.Threading.Tasks;
 
 namespace StarWarsUniverseInfoSite.Models
 {
-    public class InfoRepository
+    public class InfoRepository : IInfoRepository
     {
-        private static List<Planet> planets = new List<Planet>();
+        private List<Planet> planets = new List<Planet>();
 
-        public static List<Planet> Planets { get { return planets; } }
+        public List<Planet> Planets { get { return planets; } }
         public void AddPlanet(Planet planet)
         {
             planets.Add(planet);
         }
 
-        public static Planet GetPlanetByName(string name)
+        public Planet GetPlanetByName(string name)
         {
             Planet planet = planets.Find(p => p.PlanetName == name);
             return planet;
         }
 
-        private static List<Species> speciesList = new List<Species>();
+        private List<Species> speciesList = new List<Species>();
 
-        public static List<Species> SWSpecies { get { return speciesList; } }
-        public static void AddSpecies(Species species)
+        public List<Species> SWSpecies { get { return speciesList; } }
+        public void AddSpecies(Species species)
         {
             speciesList.Add(species);
         }
-        public static Species GetSpeciesBySpeciesName(string speciesName)
+        public Species GetSpeciesBySpeciesName(string speciesName)
         {
             Species species = speciesList.Find(s => s.SpeciesName == speciesName);
             return species;
         }
 
-        private static List<Vehicle> vehicles = new List<Vehicle>();
+        private List<Vehicle> vehicles = new List<Vehicle>();
 
-        public static List<Vehicle> Vehicles { get { return vehicles; } }
-        public static void AddVehicle(Vehicle vehicle)
+        public List<Vehicle> Vehicles { get { return vehicles; } }
+        public void AddVehicle(Vehicle vehicle)
         {
             vehicles.Add(vehicle);
         }
+        public Vehicle GetVehicleByName(string name)
+        {
+            Vehicle vehicle = vehicles.Find(s => s.Name == name);
+            return vehicle;
+        }
 
-        private static List<Starship> starships = new List<Starship>();
+        private List<Starship> starships = new List<Starship>();
 
-        public static List<Starship> Starships { get { return starships; } }
-        public static void AddStarship(Starship starship)
+        public List<Starship> Starships { get { return starships; } }
+        public void AddStarship(Starship starship)
         {
             starships.Add(starship);
         }
-
-        public static Starship GetStarshipByName(string name)
+        public Starship GetStarshipByName(string name)
         {
             Starship starship = starships.Find(s => s.Name == name);
             return starship;

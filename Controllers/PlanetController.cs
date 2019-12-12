@@ -10,10 +10,15 @@ namespace StarWarsUniverseInfoSite.Controllers
     public class PlanetController : Controller
     {
         Species species;
+        IInfoRepository repo;
+        public PlanetController(IInfoRepository r)
+        {
+            repo = r;
+        }
         public PlanetController()
         {
             // This is temporary code, just for testing
-            if (InfoRepository.SWSpecies.Count == 0) // only do this if it hasn't been done already
+            if (repo.SWSpecies.Count == 0) // only do this if it hasn't been done already
             {
                 species = new Species()
                 {
@@ -33,31 +38,31 @@ namespace StarWarsUniverseInfoSite.Controllers
                     Climate = "tropical",
                     Gravity = 1
                 };
-                InfoRepository.AddSpecies(species);
+                repo.AddSpecies(species);
             }
         }
         public ViewResult Planet()
         {
-            List<Planet> planets = InfoRepository.Planets;
+            List<Planet> planets = repo.Planets;
             return View(planets);
         }
 
         public ViewResult Species()
         {
-            List<Species> species = InfoRepository.SWSpecies;
+            List<Species> species = repo.SWSpecies;
             return View(species);
         }
 
         public ViewResult ViewSpecies(string speciesName)
         {
-            species = InfoRepository.GetSpeciesBySpeciesName(speciesName);
+            species = repo.GetSpeciesBySpeciesName(speciesName);
             return View(species);
         }
 
         /*[HttpPost]
         public RedirectToActionResult Species(string species)
         {
-            Species speciesName = InfoRepository.GetSpeciesBySpeciesName(species);
+            Species speciesName = repo.GetSpeciesBySpeciesName(species);
             // this is temporary, in the future the data will go in a database
 
             return RedirectToAction("ViewSpecies", speciesName);
