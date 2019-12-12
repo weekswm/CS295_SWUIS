@@ -44,11 +44,20 @@ namespace StarWarsUniverseInfoSite.Controllers
             List<Starship> starship = InfoRepository.Starships;
             return View(starship);
         }
-        
-        public ViewResult ViewStarship(string starshipDropdown)
+
+        public ViewResult ViewStarship(Starship starship)
         {
-            starship = InfoRepository.GetStarshipByName(starshipDropdown);
+            List<Starship> starships = InfoRepository.Starships;
             return View(starship);
+        }
+
+        [HttpPost]
+        public RedirectToActionResult Starship(string starshipDropdown)
+        {
+            Starship starship = InfoRepository.GetStarshipByName(starshipDropdown);
+            // this is temporary, in the future the data will go in a database
+
+            return RedirectToAction("ViewStarship", starship);
         }
     }
 }

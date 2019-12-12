@@ -18,7 +18,7 @@
     <h4>Below is a list of all of the Starships in the Star Wars Universe that we currently have data on. I'm sure that more are being developed and will appear in the sky at some point soon. Choose any one to learn more about it!</h4>
     <br />
     <div class="dropdown-container">
-        <form method="get" asp-action="ViewStarship">
+        <form method="post" asp-controller="Vehicle">
             <div class="form-group">
                 <label class="col-md-4 control-label">Select Starship</label>
                 <select class="form-control" name="starshipDropdown">

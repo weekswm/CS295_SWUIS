@@ -28,25 +28,66 @@
             </tr>
             <tr>
                 <td>
-                    @Model.SpeciesName;
+                    @Model.SpeciesName
                 </td>
                 <td>
-                    @Model.Classification;
+                    @Model.Classification
                 </td>
                 <td>
-                    @Model.Designation;
+                    @Model.Designation
                 </td>
                 <td>
-                    @Model.AvgHeight;
+                    @Model.AvgHeight
                 </td>
                 <td>
-                    @Model.Language;
+                    @Model.Language
                 </td>
                 <td>
-                    @Model.AvgLifeSpan;
+                    @Model.AvgLifeSpan
                 </td>
                 <td>
-                    @Model.Homeworld.PlanetName;
+                    @Model.Homeworld.PlanetName
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="text-center">
+        <h1 class="display-4">@Model.Homeworld.PlanetName: the @Model.SpeciesName Homeworld</h1>
+    </div>
+    <br />
+    <div>
+        <table style="width:100%">
+            <tr>
+                <th>Planet Name</th>
+                <th>Rotational Period (mths)</th>
+                <th>Orbital Period (days)</th>
+                <th>Diameter (ft.)</th>
+                <th>Climate</th>
+                <th>Gravity (std.)</th>
+            </tr>
+            <tr>
+                <td>
+                    @Model.Homeworld.PlanetName
+                </td>
+                <td>
+                    @Model.Homeworld.RotationalPeriod
+                </td>
+                <td>
+                    @Model.Homeworld.OrbitalPeriod
+                </td>
+                <td>
+                    @Model.Homeworld.Diameter
+                </td>
+                <td>
+                    @Model.Homeworld.Climate
+                </td>
+                <td>
+                    @Model.Homeworld.Gravity
                 </td>
             </tr>
         </table>
