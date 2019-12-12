@@ -9,7 +9,7 @@ namespace StarWarsUniverseInfoSite.Models
     {
         private List<Starship> starships = new List<Starship>();
 
-        //public int StarshipID { get; set; }
+        public int StarshipID { get; set; }
         public string Name { get; set; }
         public string Model { get; set; }
         public string Manufacturer { get; set; }

@@ -9,17 +9,20 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using StarWarsUniverseInfoSite.Models;
 
 namespace StarWarsUniverseInfoSite
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private IHostingEnvironment environment;
+        public IConfiguration Configuration { get; }
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+            environment = env;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -30,13 +33,25 @@ namespace StarWarsUniverseInfoSite
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            if (environment.IsDevelopment())
+            {
+                services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration["ConnectionStrings:MsSqlConnection"]));
+            }
+            else if (environment.IsProduction())
+            {
+                services.AddDbContext<AppDbContext>(options =>
+                    options.UseSqlServer(
+                    Configuration["ConnectionStrings:MySqlConnection"]));
+            }
+            services.AddTransient<IInfoRepository, InfoRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, AppDbContext context)
         {
             if (env.IsDevelopment())
             {
@@ -59,6 +74,8 @@ namespace StarWarsUniverseInfoSite
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            context.Database.Migrate();
+            SeedData.Seed(context);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace StarWarsUniverseInfoSite.Models
     {
         private List<Planet> planets = new List<Planet>();
 
-        //public int PlanetID { get; set; }
+        public int PlanetID { get; set; }
         public string PlanetName { get; set; }
         public int RotationalPeriod { get; set; }
         public int OrbitalPeriod { get; set; }

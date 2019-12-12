@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace StarWarsUniverseInfoSite.Models
 {
     public class InfoRepository : IInfoRepository
     {
+        private AppDbContext context;
+        public InfoRepository(AppDbContext appDbContext)
+        {
+            context = appDbContext;
+        }
         private List<Planet> planets = new List<Planet>();
 
-        public List<Planet> Planets { get { return planets; } }
+        public List<Planet> Planets { get { return context.Planets.ToList(); } }
         public void AddPlanet(Planet planet)
         {
-            planets.Add(planet);
+            context.Planets.Add(planet);
+            context.SaveChanges();
         }
 
         public Planet GetPlanetByName(string name)
@@ -23,10 +30,11 @@ namespace StarWarsUniverseInfoSite.Models
 
         private List<Species> speciesList = new List<Species>();
 
-        public List<Species> SWSpecies { get { return speciesList; } }
+        public List<Species> SWSpecies { get { return context.SWSpecies.Include("Planets").ToList(); } }
         public void AddSpecies(Species species)
         {
-            speciesList.Add(species);
+            context.SWSpecies.Add(species);
+            context.SaveChanges();
         }
         public Species GetSpeciesBySpeciesName(string speciesName)
         {
@@ -36,10 +44,11 @@ namespace StarWarsUniverseInfoSite.Models
 
         private List<Vehicle> vehicles = new List<Vehicle>();
 
-        public List<Vehicle> Vehicles { get { return vehicles; } }
+        public List<Vehicle> Vehicles { get { return context.Vehicles.ToList(); } }
         public void AddVehicle(Vehicle vehicle)
         {
-            vehicles.Add(vehicle);
+            context.Vehicles.Add(vehicle);
+            context.SaveChanges();
         }
         public Vehicle GetVehicleByName(string name)
         {
@@ -49,10 +58,11 @@ namespace StarWarsUniverseInfoSite.Models
 
         private List<Starship> starships = new List<Starship>();
 
-        public List<Starship> Starships { get { return starships; } }
+        public List<Starship> Starships { get { return context.Starships.ToList(); } }
         public void AddStarship(Starship starship)
         {
-            starships.Add(starship);
+            context.Starships.Add(starship);
+            context.SaveChanges();
         }
         public Starship GetStarshipByName(string name)
         {

@@ -10,7 +10,7 @@ namespace StarWarsUniverseInfoSite.Models
         private List<Species> speciesList = new List<Species>();
         private List<Planet> planets = new List<Planet>();
 
-        //public int SpeciesID { get; set; }
+        public int SpeciesID { get; set; }
         public string SpeciesName { get; set; }
         public string Classification { get; set; }
         public string Designation { get; set; }

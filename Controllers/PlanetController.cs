@@ -15,7 +15,7 @@ namespace StarWarsUniverseInfoSite.Controllers
         {
             repo = r;
         }
-        public PlanetController()
+        /*public PlanetController()
         {
             // This is temporary code, just for testing
             if (repo.SWSpecies.Count == 0) // only do this if it hasn't been done already
@@ -40,7 +40,7 @@ namespace StarWarsUniverseInfoSite.Controllers
                 };
                 repo.AddSpecies(species);
             }
-        }
+        }*/
         public ViewResult Planet()
         {
             List<Planet> planets = repo.Planets;
