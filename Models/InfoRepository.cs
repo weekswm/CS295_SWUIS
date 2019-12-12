@@ -49,5 +49,12 @@ namespace StarWarsUniverseInfoSite.Models
         {
             starships.Add(starship);
         }
+
+        public static Starship GetStarshipByName(string name)
+        {
+            Starship starship = starships.Find(s => s.Name == name);
+            return starship;
+        }
+
     }
 }

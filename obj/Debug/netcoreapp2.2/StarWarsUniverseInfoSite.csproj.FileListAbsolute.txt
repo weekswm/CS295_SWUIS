@@ -71,3 +71,4 @@ C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Debug\netcoreapp
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Debug\netcoreapp2.2\StarWarsUniverseInfoSite.pdb
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Debug\netcoreapp2.2\StarWarsUniverseInfoSite.csproj.CopyComplete
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Debug\netcoreapp2.2\Razor\Views\Planet\ViewSpecies.cshtml.g.cs
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Debug\netcoreapp2.2\Razor\Views\Vehicle\ViewStarship.cshtml.g.cs

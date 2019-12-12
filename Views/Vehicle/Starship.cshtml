@@ -18,44 +18,53 @@
     <h4>Below is a list of all of the Starships in the Star Wars Universe that we currently have data on. I'm sure that more are being developed and will appear in the sky at some point soon. Choose any one to learn more about it!</h4>
     <br />
     <div class="dropdown-container">
-        <div class="dropdown">
-            <label for="Starships">Select Starship</label>
-            <select class="form-control" id="starships">
-                <option value="millenniumFalcon">Millennium Falcon</option>
-                <option value="yWing">Y-wing</option>
-                <option value="xWing">X-wing</option>
-                <option value="tIEAdvancedX1">TIE Advanced x1</option>
-                <option value="slave1">Slave 1</option>
-                <option value="imperialShuttle">Imperial Shuttle</option>
-                <option value="eF76NebulonBEscortFrigate">EF76 Nebulon-B Escort Frigate</option>
-                <option value="calamariCruiser">Calamari Cruiser</option>
-                <option value="aWing">A-wing</option>
-                <option value="bWing">B-wing</option>
-                <option value="republicCruiser">Republic Cruiser</option>
-                <option value="nabooFighter">Naboo Fighter</option>
-                <option value="nabooRoyalStarship">Naboo Royal Starship</option>
-                <option value="scimitar">Scimitar</option>
-                <option value="jTypeDiplomaticBarge">J-type Diplomatic Barge</option>
-                <option value="aA9CoruscantFreighter">AA-9 Coruscant freighter</option>
-                <option value="jediStarfighter">Jedi Starfighter</option>
-                <option value="hTypeNubianYacht">H-type Nubian Yacht</option>
-                <option value="starDestroyer">Star Destroyer</option>
-                <option value="tradeFederationCruiser">Trade Federation Cruiser</option>
-                <option value="thetaClassT2cShuttle">Theta-class T-2c Shuttle</option>
-                <option value="t70XWingFighter">T-70 X-Wing Fighter</option>
-                <option value="rebelTransport">Rebel Transport</option>
-                <option value="droidControlShip">Droid Control Ship</option>
-                <option value="republicAssaultShip">Republic Assault Ship</option>
-                <option value="solarSailer">Solar Sailer</option>
-                <option value="republicAttackCruiser">Republic Attack Cruiser</option>
-                <option value="nabooStarSkiff">Naboo Star Skiff</option>
-                <option value="jediInterceptor">Jedi Interceptor</option>
-                <option value="aRC170">ARC-170</option>
-                <option value="belbullab22Starfighter">Belbullab-22 Starfighter</option>
-                <option value="cR90Corvette">CR90 Corvette</option>
-                <option value="bankingClanFrigate">Banking Clan Frigate</option>
-            </select>
-        </div>
+        <form method="post" asp-controller="Vehicle">
+            <div class="form-group">
+                <label class="col-md-4 control-label">Select Starship</label>
+                <select class="form-control" name="starship">
+                    <option value="Millennium Falcon">Millennium Falcon</option>
+                    <option value="Y-wing">Y-wing</option>
+                    <option value="X-wing">X-wing</option>
+                    <option value="TIE Advanced x1">TIE Advanced x1</option>
+                    <option value="slave1">Slave 1</option>
+                    <option value="Imperial Shuttle">Imperial Shuttle</option>
+                    <option value="EF76 Nebulon-B Escort Frigate">EF76 Nebulon-B Escort Frigate</option>
+                    <option value="Calamari Cruiser">Calamari Cruiser</option>
+                    <option value="A-wing">A-wing</option>
+                    <option value="B-wing">B-wing</option>
+                    <option value="Republic Cruiser">Republic Cruiser</option>
+                    <option value="Naboo Fighter">Naboo Fighter</option>
+                    <option value="Naboo Royal Starship">Naboo Royal Starship</option>
+                    <option value="Scimitar">Scimitar</option>
+                    <option value="J-type Diplomatic Barge">J-type Diplomatic Barge</option>
+                    <option value="AA-9 Coruscant freighter">AA-9 Coruscant freighter</option>
+                    <option value="Jedi Starfighter">Jedi Starfighter</option>
+                    <option value="H-type Nubian Yacht">H-type Nubian Yacht</option>
+                    <option value="Star Destroyer">Star Destroyer</option>
+                    <option value="Trade Federation Cruiser">Trade Federation Cruiser</option>
+                    <option value="Theta-class T-2c Shuttle">Theta-class T-2c Shuttle</option>
+                    <option value="T-70 X-Wing Fighter">T-70 X-Wing Fighter</option>
+                    <option value="Rebel Transport">Rebel Transport</option>
+                    <option value="Droid Control Ship">Droid Control Ship</option>
+                    <option value="Republic Assault Ship">Republic Assault Ship</option>
+                    <option value="Solar Sailer">Solar Sailer</option>
+                    <option value="Republic Attack Cruiser">Republic Attack Cruiser</option>
+                    <option value="Naboo Star Skiff">Naboo Star Skiff</option>
+                    <option value="Jedi Interceptor">Jedi Interceptor</option>
+                    <option value="ARC-170">ARC-170</option>
+                    <option value="Belbullab-22 Starfighter">Belbullab-22 Starfighter</option>
+                    <option value="CR90 Corvette">CR90 Corvette</option>
+                    <option value="Banking Clan Frigate">Banking Clan Frigate</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button input type="submit" class="btn btn-warning">submit</button>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 </html>

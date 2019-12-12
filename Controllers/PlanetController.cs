@@ -22,16 +22,16 @@ namespace StarWarsUniverseInfoSite.Controllers
                     Designation = "sentient",
                     AvgHeight = 210,
                     Language = "Shyriiwook",
-                    AvgLifeSpan = 400,
-                    Homeworld = new Planet()
-                    {
-                        PlanetName = "Kashyyyk",
-                        RotationalPeriod = 26,
-                        OrbitalPeriod = 381,
-                        Diameter = 12765,
-                        Climate = "tropical",
-                        Gravity = 1
-                    }
+                    AvgLifeSpan = 400
+                };
+                species.Homeworld = new Planet
+                {
+                    PlanetName = "Kashyyyk",
+                    RotationalPeriod = 26,
+                    OrbitalPeriod = 381,
+                    Diameter = 12765,
+                    Climate = "tropical",
+                    Gravity = 1
                 };
                 InfoRepository.AddSpecies(species);
             }
