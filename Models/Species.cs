@@ -8,7 +8,6 @@ namespace StarWarsUniverseInfoSite.Models
     public class Species
     {
         private List<Species> speciesList = new List<Species>();
-        private List<Planet> planets = new List<Planet>();
 
         public int SpeciesID { get; set; }
         public string SpeciesName { get; set; }
@@ -17,9 +16,8 @@ namespace StarWarsUniverseInfoSite.Models
         public int AvgHeight { get; set; }
         public string Language { get; set; }
         public int AvgLifeSpan { get; set; }
-        public Planet Homeworld { get; set; }
+        public string Homeworld { get; set; }
 
         public List<Species> SWSpecies { get { return speciesList; } }
-        public List<Planet> Planets { get { return planets; } }
     }
 }

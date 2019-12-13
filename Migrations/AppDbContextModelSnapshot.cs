@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StarWarsUniverseInfoSite.Models;
 
@@ -15,12 +16,14 @@ namespace StarWarsUniverseInfoSite.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("StarWarsUniverseInfoSite.Models.Planet", b =>
                 {
                     b.Property<int>("PlanetID")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Climate");
 
@@ -36,13 +39,9 @@ namespace StarWarsUniverseInfoSite.Migrations
 
                     b.Property<int>("RotationalPeriod");
 
-                    b.Property<int?>("SpeciesID");
-
                     b.HasKey("PlanetID");
 
                     b.HasIndex("PlanetID1");
-
-                    b.HasIndex("SpeciesID");
 
                     b.ToTable("Planets");
                 });
@@ -50,7 +49,8 @@ namespace StarWarsUniverseInfoSite.Migrations
             modelBuilder.Entity("StarWarsUniverseInfoSite.Models.Species", b =>
                 {
                     b.Property<int>("SpeciesID")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("AvgHeight");
 
@@ -60,7 +60,7 @@ namespace StarWarsUniverseInfoSite.Migrations
 
                     b.Property<string>("Designation");
 
-                    b.Property<int?>("HomeworldPlanetID");
+                    b.Property<string>("Homeworld");
 
                     b.Property<string>("Language");
 
@@ -70,8 +70,6 @@ namespace StarWarsUniverseInfoSite.Migrations
 
                     b.HasKey("SpeciesID");
 
-                    b.HasIndex("HomeworldPlanetID");
-
                     b.HasIndex("SpeciesID1");
 
                     b.ToTable("SWSpecies");
@@ -80,7 +78,8 @@ namespace StarWarsUniverseInfoSite.Migrations
             modelBuilder.Entity("StarWarsUniverseInfoSite.Models.Starship", b =>
                 {
                     b.Property<int>("StarshipID")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("CargoCapacity");
 
@@ -118,7 +117,8 @@ namespace StarWarsUniverseInfoSite.Migrations
             modelBuilder.Entity("StarWarsUniverseInfoSite.Models.Vehicle", b =>
                 {
                     b.Property<int>("VehicleID")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("CargoCapacity");
 
@@ -154,18 +154,10 @@ namespace StarWarsUniverseInfoSite.Migrations
                     b.HasOne("StarWarsUniverseInfoSite.Models.Planet")
                         .WithMany("Planets")
                         .HasForeignKey("PlanetID1");
-
-                    b.HasOne("StarWarsUniverseInfoSite.Models.Species")
-                        .WithMany("Planets")
-                        .HasForeignKey("SpeciesID");
                 });
 
             modelBuilder.Entity("StarWarsUniverseInfoSite.Models.Species", b =>
                 {
-                    b.HasOne("StarWarsUniverseInfoSite.Models.Planet", "Homeworld")
-                        .WithMany()
-                        .HasForeignKey("HomeworldPlanetID");
-
                     b.HasOne("StarWarsUniverseInfoSite.Models.Species")
                         .WithMany("SWSpecies")
                         .HasForeignKey("SpeciesID1");

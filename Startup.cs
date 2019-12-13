@@ -36,8 +36,8 @@ namespace StarWarsUniverseInfoSite
             if (environment.IsDevelopment())
             {
                 services.AddDbContext<AppDbContext>(options =>
-                options.UseMySql(
-                    Configuration["ConnectionStrings:MySqlConnection"]));
+                options.UseSqlServer(
+                    Configuration["ConnectionStrings:LocalDbConnection"]));
             }
             else if (environment.IsProduction())
             {

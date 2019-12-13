@@ -78,3 +78,9 @@ C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\appsettings.json
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\StarWarsUniverseInfoSite.deps.json
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\StarWarsUniverseInfoSite.runtimeconfig.json
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\Publish\web.config
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\appsettings.Production.json
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\Publish\appsettings.Development.json
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\Publish\appsettings.json
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\Publish\StarWarsUniverseInfoSite.deps.json
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\Publish\StarWarsUniverseInfoSite.runtimeconfig.json

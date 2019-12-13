@@ -28,9 +28,9 @@ namespace StarWarsUniverseInfoSite.Models
             return planet;
         }
 
-        private List<Species> speciesList = new List<Species>();
+        //private List<Species> speciesList = new List<Species>();
 
-        public List<Species> SWSpecies { get { return context.SWSpecies.Include("Planets").ToList(); } }
+        public List<Species> SWSpecies { get { return context.SWSpecies.ToList(); } }
         public void AddSpecies(Species species)
         {
             context.SWSpecies.Add(species);
@@ -38,7 +38,7 @@ namespace StarWarsUniverseInfoSite.Models
         }
         public Species GetSpeciesBySpeciesName(string speciesName)
         {
-            Species species = speciesList.Find(s => s.SpeciesName == speciesName);
+            Species species = context.SWSpecies.ToList().Find(s => s.SpeciesName == speciesName);
             return species;
         }
 

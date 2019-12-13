@@ -39,3 +39,4 @@ C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Release\netcorea
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Release\netcoreapp2.2\win-x86\StarWarsUniverseInfoSite.dll
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Release\netcoreapp2.2\win-x86\StarWarsUniverseInfoSite.pdb
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Release\netcoreapp2.2\win-x86\StarWarsUniverseInfoSite.csproj.CopyComplete
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Release\netcoreapp2.2\win-x86\appsettings.Production.json
