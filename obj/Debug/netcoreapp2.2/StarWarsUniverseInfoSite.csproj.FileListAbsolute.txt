@@ -72,3 +72,9 @@ C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Debug\netcoreapp
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Debug\netcoreapp2.2\StarWarsUniverseInfoSite.csproj.CopyComplete
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Debug\netcoreapp2.2\Razor\Views\Planet\ViewSpecies.cshtml.g.cs
 C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\obj\Debug\netcoreapp2.2\Razor\Views\Vehicle\ViewStarship.cshtml.g.cs
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\web.config
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\appsettings.Production.json
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\appsettings.Development.json
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\appsettings.json
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\StarWarsUniverseInfoSite.deps.json
+C:\Users\Marty\Documents\2019F\CS295N_ASPdotNET\CS295_SWUIS\bin\Debug\netcoreapp2.2\Publish\StarWarsUniverseInfoSite.runtimeconfig.json

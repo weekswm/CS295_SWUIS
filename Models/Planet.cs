@@ -8,6 +8,7 @@ namespace StarWarsUniverseInfoSite.Models
     public class Planet
     {
         private List<Planet> planets = new List<Planet>();
+        private List<Species> speciesList = new List<Species>();
 
         public int PlanetID { get; set; }
         public string PlanetName { get; set; }
@@ -18,6 +19,6 @@ namespace StarWarsUniverseInfoSite.Models
         public int Gravity { get; set; }
 
         public List<Planet> Planets { get { return planets; } }
-
+        public List<Species> SWSpecies { get { return speciesList; } }
     }
 }
